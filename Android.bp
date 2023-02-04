@@ -1,0 +1,24 @@
+soong_namespace {
+}
+
+android_app_import {
+	name: "MiuiCamera",
+    overrides: ["Snap", "Camera2", "GCamGo"],
+	owner: "MiuiCamera",
+	apk: "system/priv-app/MiuiCamera/MiuiCamera.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
+        name: "miuires",
+        owner: "miuires",
+        apk: "system/app/miuires/miuires.apk",
+        certificate: "platform",
+        dex_preopt: {
+                enabled: false,
+        },
+}
